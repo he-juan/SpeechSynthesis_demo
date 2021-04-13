@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SpeechSynthesis_demo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <form>
+        <span>文字：</span>
+        <textarea cols="80" rows="30" type="text" class="txt">
+                我如果爱你——
+                绝不像攀援的凌霄花，
+                借你的高枝炫耀自己；
+                我如果爱你——
+                绝不学痴情的鸟儿，
+                为绿荫重复单调的歌曲；
+                也不止像泉源，
+                常年送来清凉的慰藉；
+                也不止像险峰，
+                增加你的高度，衬托你的威仪。
+                甚至日光。
+                甚至春雨。
+                不，这些都还不够！
+                我必须是你近旁的一株木棉，
+                作为树的形像和你站在一起。
+                根，紧握在地下，
+                叶，相触在云里。
+                每一阵风过，
+                我们都互相致意，
+                但没有人，
+                听懂我们的言语。
+                你有你的铜枝铁干，
+                像刀，像剑，
+                也像戟；
+                我有我红硕的花朵，
+                像沉重的叹息，
+                又像英勇的火炬。
+                我们分担寒潮、风雷、霹雳；
+                我们共享雾霭、流岚、虹霓。
+                仿佛永远分离，
+                却又终身相依。
+                这才是伟大的爱情，
+                坚贞就在这里：
+                爱——
+                不仅爱你伟岸的身躯，
+                也爱你坚持的位置，足下的土地。
+        </textarea>
+
+        <label for="pitch">语言：</label>
+        <select>
+            <!--<option value="default">请选择</option>-->
+        </select>
+
+        <label for="rate">语速：</label>
+        <div>
+            <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+            <div class="rate-value">1</div>
+            <div class="clearfix"></div>
+        </div>
+
+        <label for="pitch">语音：</label>
+        <div>
+            <input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+            <div class="pitch-value">1</div>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="controls">
+            <button id="play" type="submit">Play</button>
+            <button id="stop" type="submit">stop</button>
+        </div>
+    </form>
+
+
+</body>
+
+<script src = js/index.js> </script>
+</html>
