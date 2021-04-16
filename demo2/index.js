@@ -76,7 +76,7 @@
             option.setAttribute('data-name', voices[i].name);
             console.warn("voices:",voices)
             voiceSelect.appendChild(option);
-            console.warn("selectedIndex:",selectedIndex)
+            // console.warn("selectedIndex:",selectedIndex)
         }
         voiceSelect.selectedIndex = selectedIndex;
     }
