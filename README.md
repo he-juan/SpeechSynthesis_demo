@@ -5,6 +5,7 @@
     [Web Speech API_demo] (https://www.audero.it/demo/web-speech-api-demo.html)
     [speech Recongnition_解析](https://xiaotianxia.github.io/blog/vuepress/js/speech_in_js_recognition.html)
     [speech Recongnition_demo](https://github.com/mdn/web-speech-api/tree/master/)
+    [Web Speech API 解析] (https://wicg.github.io/speech-api/#speechreco-section)
      - 使用基本流程如下：
          - (1) 创建SpeechRecognition的新实例。由于到目前为止，浏览器还没有广泛支持，所以需要webKit的前缀：
               > var newRecogniation = new webkitSpeechRecognition()
