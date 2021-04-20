@@ -2,6 +2,7 @@
  [语音识别和语音合成简介](https://www.zhangxinxu.com/wordpress/2017/01/html5-speech-recognition-synthesis-api/)
 
  1. 语音识别 `speech Recongnition`：指的是`语音转文字`
+    [Web Speech API_demo] (https://www.audero.it/demo/web-speech-api-demo.html)
     [speech Recongnition_解析](https://xiaotianxia.github.io/blog/vuepress/js/speech_in_js_recognition.html)
     [speech Recongnition_demo](https://github.com/mdn/web-speech-api/tree/master/)
      - 使用基本流程如下：
