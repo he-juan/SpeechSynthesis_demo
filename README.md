@@ -21,8 +21,8 @@
            newRecognition.onresult = function(event) {
                 console.log(event);
             }
-           ```
-
+          ```
+     - demo3示例【语音转文字】暂不可行,浏览器暂不支持
 
  2. 语音合成 `Speech Synthesis`:指的是`文字转语音`
     [Speech Synthesis_demo](https://xiaotianxia.github.io/blog/vuepress/js/speech_in_js_synthesis.html)

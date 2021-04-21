@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<form action="https://www.example.com/search">-->
+<!--<input type="search" id="q" name="q" size=60>-->
+<!--<input type="button" value="Click to Speak" onclick="recognition.start()">-->
+<!--</form>-->
+
+<button id="button" onclick="toggleStartStop()"></button>
+<div style="border:dotted;padding:10px">
+    <span id="final_span"></span>
+    <span id="interim_span" style="color:grey"></span>
+</div>
+
+<script type="text/javascript">
+
+    // let q = document.getElementById('q')
+    // let recognition = new webkitSpeechRecognition();
+    // recognition.onresult = function(event) {
+    //     if (event.results.length > 0) {
+    //         q.value = event.results[0][0].transcript;
+    //         q.form.submit();
+    //     }
+    // }
+
+
+    let button = document.getElementById('button')
+    let final_span = document.getElementById('final_span')
+    let interim_span = document.getElementById('interim_span')
+    let recognizing
+    let recognition = new webkitSpeechRecognition();
+    console.warn("recognition:",recognition)
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    reset();
+    recognition.onend = reset;
+
+    recognition.onresult = function (event) {
+        console.warn("event:",event)
+        var final = "";
+        var interim = "";
+        for (var i = 0; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+                final += event.results[i][0].transcript;
+            } else {
+                interim += event.results[i][0].transcript;
+            }
+        }
+        final_span.innerHTML = final;
+        interim_span.innerHTML = interim;
+    }
+
+    function reset() {
+        recognizing = false;
+        button.innerHTML = "Click to Speak";
+    }
+
+    function toggleStartStop() {
+        if (recognizing) {
+            recognition.stop();
+            reset();
+        } else {
+            recognition.start();
+            recognizing = true;
+            button.innerHTML = "Click to Stop";
+            final_span.innerHTML = "";
+            interim_span.innerHTML = "";
+        }
+    }
+
+</script>
+
+</body>
+</html>
